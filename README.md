@@ -22,6 +22,17 @@ Here is the small snippet for all the functionality.
 
 1) Play() functionality is designed to play an random song using array index, which return by the java.util.Random().nextInt(SIZE_OF_ARRAY).
 
+Once getting random number will replace the "random" number to "size-1" of array. So that for every song played will move the played song position to last of the size-1 array position.
+
+Explanation:
+------------
+
+For example:
+
+we have 4 songs in the playlist as below
+
+[a, b, c, d]  and are indexes [0 to 3] respectively. When we call the play() function it get's an random number from the SIZE=4. Assume that we got an 2 index as random number. In such cases will play "c" song and shift the 2 index value to "SIZE - 1" position. After that our playlist will be as below [a, b, d, c] and SIZE of the variable decremented, Now SIZE = 3. We will play the songs until SIZE is getting ZERO(SIZE = 0).
+
 2) Next() functionality is designed to play the next song to the currently playing/played song. Here Always we maintain current song index value. so that we can play the next song by incrementing the current song index(currentIndex).
 
 3) Previous() functionality is designed to play a previous song to the currently playing/played song. Here Always we maintain current song index value. so that we can play the next song by decrementing the current song index(currentIndex).
